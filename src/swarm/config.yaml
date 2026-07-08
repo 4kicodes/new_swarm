@@ -1,0 +1,35 @@
+###############################################################################
+# Drone Swarm Framework Configuration
+###############################################################################
+
+mavlink:
+
+  # List of MAVLink connection strings.
+  #
+  # Supported examples:
+  #
+  # udp:127.0.0.1:14550
+  # tcp:192.168.1.20:5760
+  # /dev/ttyACM0
+  #
+  endpoints:
+    - udpin:0.0.0.0:14550
+    - udpin:0.0.0.0:14560
+    - udpin:0.0.0.0:14570
+
+
+connection:
+
+  # Seconds to wait before considering heartbeat lost.
+  heartbeat_timeout: 30
+
+  # DroneKit wait_ready option.
+  wait_ready: true
+
+  # Default serial baudrate.
+  baudrate: 115200
+
+
+logging:
+
+  level: INFO
